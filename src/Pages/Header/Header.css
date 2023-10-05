@@ -1,0 +1,6 @@
+.sign-up-btn {
+    background-color: crimson;
+}
+ .sign-up-btn:hover {
+    background-color: rgb(231, 5, 51);
+ }

@@ -1,0 +1,10 @@
+.route-link a {
+    text-decoration: none;
+    color: crimson;
+    font-weight: bold;
+    margin-right: 20%;
+}
+
+.route-link a.active {
+    border-bottom: 3px solid crimson;
+}

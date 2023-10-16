@@ -1,0 +1,50 @@
+[
+    {
+        "id": 1,
+        "mealName": "Salmon with Grapefruit and Lentil Salad",
+        "mealText": "Exquisite cuisine awaits you this evening.",
+        "price": "$9.99",
+        "img": "images/dinner/dinner6.png",
+        "imgUrl": "https://i.ibb.co/j4sJx9N/dinner6.png"
+    },
+    {
+        "id": 2,
+        "mealName": "Lamony Salmon Piccata",
+        "mealText": "A culinary journey to satisfy cravings.",
+        "price": "$10.99",
+        "img": "images/dinner/dinner2.png",
+        "imgUrl": "https://i.ibb.co/BsByD4Y/dinner2.png"
+    },
+    {
+        "id": 3,
+        "mealName": "Pure Vegitarian Food with Extra Cheese",
+        "mealText": "Savor flavors that ignite your senses.",
+        "price": "$12.99",
+        "img": "images/dinner/dinner5.png",
+        "imgUrl": "https://i.ibb.co/2ssVWjp/dinner5.png"
+    },
+    {
+        "id": 4,
+        "mealName": "French Fries with Cheese !!",
+        "mealText": "Indulge in a gourmet dinner experience.",
+        "price": "$8.99",
+        "img": "images/dinner/dinner4.png",
+        "imgUrl": "https://i.ibb.co/KqJmJQF/dinner4.png"
+    },
+    {
+        "id": 5,
+        "mealName": "Garlic Butter Baked Salmon",
+        "mealText": "Enjoy a memorable evening with us.",
+        "price": "$6.99",
+        "img": "images/dinner/dinner3.png",
+        "imgUrl": "https://i.ibb.co/Wv9jK7N/dinner3.png"
+    },
+    {
+        "id": 6,
+        "mealName": "Baked Chicken",
+        "mealText": "A culinary journey to satisfy cravings.",
+        "price": "$9.99",
+        "img": "images/dinner/dinner1.png",
+        "imgUrl": "https://i.ibb.co/yPrNhHd/dinner1.png"
+    }
+]

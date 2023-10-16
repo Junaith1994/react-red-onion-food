@@ -1,7 +1,6 @@
 import React from 'react';
-import './Breakfast.css';
 
-const BreakfastMeal = ({ meal }) => {
+const LunchMeal = ({ meal }) => {
     const { img, mealName, mealText, price } = meal;
 
     return (
@@ -16,4 +15,4 @@ const BreakfastMeal = ({ meal }) => {
     );
 };
 
-export default BreakfastMeal;
+export default LunchMeal;

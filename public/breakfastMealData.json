@@ -4,14 +4,16 @@
         "mealName": "Bagel and cream cheese",
         "mealText": "Healthy smoothie, a nutritious morning choice.",
         "price": "$6.99",
-        "img": "images/breakfast/breakfast4.png"  
+        "img": "images/breakfast/breakfast4.png",  
+        "imgUrl": "https://ibb.co/KbYpnPg"
     },
     {
         "id": 2,
         "mealName": "Breakfast sandwitch",
         "mealText": "Warm oatmeal, a comforting start everyday.",
         "price": "$9.99",
-        "img": "images/breakfast/breakfast2.png"  
+        "img": "images/breakfast/breakfast2.png",
+        "imgUrl": "https://ibb.co/wCZF8Mp"  
     },
     {
         "id": 3,

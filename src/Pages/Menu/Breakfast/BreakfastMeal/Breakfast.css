@@ -1,0 +1,4 @@
+.meal-item:hover {
+    box-shadow: 7px 7px 20px;
+    border-radius: 20px;
+}

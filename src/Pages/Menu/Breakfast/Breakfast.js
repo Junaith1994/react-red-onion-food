@@ -11,8 +11,8 @@ const Breakfast = () => {
     }, [])
 
     return (
-        <div className='container'>
-            <div className='row'>
+        <div className='container mt-5'>
+            <div className='row g-3'>
                 {
                     meals.map(meal => <BreakfastMeal
                         key={meal.id}

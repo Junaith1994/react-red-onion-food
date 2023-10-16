@@ -1,0 +1,44 @@
+[
+    {
+        "id": 1,
+        "mealName": "Healthy Meal Plan",
+        "mealText": "Savor the Moment with Lunch Delicacies",
+        "price": "$23.99",
+        "img": "images/lunch/lunch6.png"
+    },
+    {
+        "id": 2,
+        "mealName": "Fried Chicken Bento",
+        "mealText": "Quick and Tasty Lunchtime Favorites",
+        "price": "$9.99",
+        "img": "images/lunch/lunch5.png"
+    },
+    {
+        "id": 3,
+        "mealName": "Tarragon-Rubbed-Salmon",
+        "mealText": "Lunchtime Delights: Fresh and Savory Choices",
+        "price": "$6.99",
+        "img": "images/lunch/lunch3.png"
+    },
+    {
+        "id": 4,
+        "mealName": "Indian Lunch",
+        "mealText": "Enjoy a Flavorful Midday Dining Experience",
+        "price": "$8.99",
+        "img": "images/lunch/lunch4.png"
+    },
+    {
+        "id": 5,
+        "mealName": "Beef Steak",
+        "mealText": "Delicious Lunch Options to Satisfy Cravings",
+        "price": "$15.99",
+        "img": "images/lunch/lunch1.png"
+    },
+    {
+        "id": 6,
+        "mealName": "Honey-Soy-Glazed Salmon with Peppers",
+        "mealText": "Lunchtime Delights: Fresh and Savory Choices",
+        "price": "$7.99",
+        "img": "images/lunch/lunch2.png"
+    }
+]

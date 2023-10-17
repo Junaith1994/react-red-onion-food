@@ -3,6 +3,7 @@
         "id": 1,
         "mealName": "Salmon with Grapefruit and Lentil Salad",
         "mealText": "Exquisite cuisine awaits you this evening.",
+        "description": "Beef Stir-Fry: Sizzling beef strips tossed with colorful bell peppers, crisp snow peas, and aromatic ginger, served over steamed jasmine rice.",
         "price": "$9.99",
         "img": "images/dinner/dinner6.png",
         "imgUrl": "https://i.ibb.co/j4sJx9N/dinner6.png"
@@ -11,6 +12,7 @@
         "id": 2,
         "mealName": "Lamony Salmon Piccata",
         "mealText": "A culinary journey to satisfy cravings.",
+        "description": "Teriyaki Tofu Bowl: Crispy tofu glazed in savory teriyaki sauce, paired with steamed broccoli and fluffy white rice, garnished with sesame seeds.",
         "price": "$10.99",
         "img": "images/dinner/dinner2.png",
         "imgUrl": "https://i.ibb.co/BsByD4Y/dinner2.png"
@@ -19,6 +21,7 @@
         "id": 3,
         "mealName": "Pure Vegitarian Food with Extra Cheese",
         "mealText": "Savor flavors that ignite your senses.",
+        "description": "Vegetarian Lasagna: Layers of spinach, zucchini, and melted cheese nestled between sheets of delicate pasta, topped with tangy marinara sauce.",
         "price": "$12.99",
         "img": "images/dinner/dinner5.png",
         "imgUrl": "https://i.ibb.co/2ssVWjp/dinner5.png"
@@ -27,6 +30,7 @@
         "id": 4,
         "mealName": "French Fries with Cheese !!",
         "mealText": "Indulge in a gourmet dinner experience.",
+        "description": "Grilled Lamb Chops: Juicy, herb-marinated lamb chops seared to perfection, accompanied by a medley of roasted vegetables and rosemary-infused mashed potatoes.",
         "price": "$8.99",
         "img": "images/dinner/dinner4.png",
         "imgUrl": "https://i.ibb.co/KqJmJQF/dinner4.png"
@@ -35,6 +39,7 @@
         "id": 5,
         "mealName": "Garlic Butter Baked Salmon",
         "mealText": "Enjoy a memorable evening with us.",
+        "description": "Grilled Salmon: Tender, flaky salmon infused with zesty lemon, served with a side of roasted asparagus and garlic mashed potatoes.",
         "price": "$6.99",
         "img": "images/dinner/dinner3.png",
         "imgUrl": "https://i.ibb.co/Wv9jK7N/dinner3.png"
@@ -43,6 +48,7 @@
         "id": 6,
         "mealName": "Baked Chicken",
         "mealText": "A culinary journey to satisfy cravings.",
+        "description": "Creamy Chicken Alfredo: Rich, creamy pasta adorned with tender chicken, sautéed mushrooms, and a sprinkle of freshly grated Parmesan cheese.",
         "price": "$9.99",
         "img": "images/dinner/dinner1.png",
         "imgUrl": "https://i.ibb.co/yPrNhHd/dinner1.png"

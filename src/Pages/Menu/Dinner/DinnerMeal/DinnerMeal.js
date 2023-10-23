@@ -1,6 +1,5 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import MealDetails from '../../MealDetails/MealDetails';
 
 const DinnerMeal = ({ meal, singleMeal }) => {
     const { id, img, mealName, mealText, price } = meal;

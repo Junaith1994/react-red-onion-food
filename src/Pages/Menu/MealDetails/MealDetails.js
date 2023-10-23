@@ -1,33 +1,29 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { DinnerMealContext } from '../../Context/MealProviders';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
 
 const MealDetails = () => {
     const { singleMeal } = useContext(DinnerMealContext);
     const [quantity, setQuantity] = useState(1);
     const [price, setPrice] = useState(55);
 
-    // console.log(singleMeal);
+    console.log(singleMeal);
     console.log(quantity);
     // price calculator
-    const priceHandler = () => setPrice(quantity * 55);
+    const priceHandler = () => setPrice(prevPrice => quantity * 55);
 
     // Quantity handler
     const qtyHandler = add => {
-        add ? setQuantity(quantity + 1) : quantity > 1 && setQuantity(quantity - 1)
-        priceHandler()
-        // if (add) {
-        //     setQuantity(quantity + 1);
-        //     console.log(quantity);
-        //     priceHandler()
-        // }
-        // else {
-        //     quantity > 1 && setQuantity(quantity - 1);
-        //     priceHandler()
-        // }
+        add ? setQuantity(prevQuantity => quantity + 1) : quantity > 1 && setQuantity(prevQuantity => prevQuantity - 1)
     }
 
+    useEffect(() => {
+        priceHandler();
+    }, [quantity]);
+
     return (
-        <div className='d-flex'>
+        <div className='d-flex container'>
             <div>
                 <h3>{singleMeal?.mealName}</h3>
                 <p>{singleMeal?.description}</p>
@@ -36,6 +32,12 @@ const MealDetails = () => {
                     <input type="button" className='border-0 fs-3' onClick={() => qtyHandler(false)} name="" value="-" />
                     <span className='mx-3 fs-5'>{quantity}</span>
                     <input className='border-0 fs-3' type="button" onClick={() => qtyHandler(true)} name="" value="+" />
+                </div>
+                <div className='my-4'>
+                    <button style={{"background-color": 'crimson'}} className='btn text-white px-4 py-2 rounded-pill'>
+                        <FontAwesomeIcon icon={faCartShopping}></FontAwesomeIcon>
+                        <span className='ms-3'>Add</span>
+                    </button>
                 </div>
             </div>
             <div>

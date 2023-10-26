@@ -6,6 +6,8 @@ import Lunch from './Pages/Menu/Lunch/Lunch';
 import Dinner from './Pages/Menu/Dinner/Dinner';
 import Menu from './Pages/Menu/Menu';
 import MealDetails from './Pages/Menu/MealDetails/MealDetails';
+import LunchMealDetails from './Pages/Menu/Lunch/LunchMealDetails/LunchMealDetails';
+import FoodCart from './Pages/FoodCart/FoodCart';
 
 function App() {
   return (
@@ -17,6 +19,8 @@ function App() {
         <Route path='/lunch' element={<Lunch></Lunch>}></Route>
         <Route path='/dinner' element={<Dinner></Dinner>}></Route>
         <Route path='/mealdetails/:mealId' element={<MealDetails></MealDetails>}></Route>
+        <Route path='/lunchMealDetails/:mealId' element={<LunchMealDetails></LunchMealDetails>}></Route>
+        <Route path='/foodcart' element={<FoodCart></FoodCart>}></Route>
       </Routes>
     </div>
   );

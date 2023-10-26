@@ -15,7 +15,7 @@ const Header = () => {
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className='ms-auto'>
-                            <Nav.Link as={Link} to="#deets" className='me-3'><FontAwesomeIcon icon={faCartShopping}></FontAwesomeIcon></Nav.Link>
+                            <Nav.Link as={Link} to="/foodcart" className='me-3'><FontAwesomeIcon icon={faCartShopping}></FontAwesomeIcon></Nav.Link>
                             <Nav.Link className='fw-bold me-3' as={Link} to="/login">Login</Nav.Link>
                             <Button className='sign-up-btn border border-0 rounded-pill px-4'>Sign up</Button>
                         </Nav>

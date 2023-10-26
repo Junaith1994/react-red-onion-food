@@ -4,12 +4,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
 
 const MealDetails = () => {
-    const { singleMeal } = useContext(DinnerMealContext);
+    const { singleMeal, handleFoodCart } = useContext(DinnerMealContext);
     const [quantity, setQuantity] = useState(1);
     const [price, setPrice] = useState(55);
 
-    console.log(singleMeal);
-    console.log(quantity);
+    // console.log(singleMeal);
+    // console.log(quantity);
     // price calculator
     const priceHandler = () => setPrice(prevPrice => quantity * 55);
 
@@ -34,7 +34,7 @@ const MealDetails = () => {
                     <input className='border-0 fs-3' type="button" onClick={() => qtyHandler(true)} name="" value="+" />
                 </div>
                 <div className='my-4'>
-                    <button style={{"background-color": 'crimson'}} className='btn text-white px-4 py-2 rounded-pill'>
+                    <button onClick={() => handleFoodCart(singleMeal)} style={{"backgroundColor": "crimson"}} className='btn text-white px-4 py-2 rounded-pill'>
                         <FontAwesomeIcon icon={faCartShopping}></FontAwesomeIcon>
                         <span className='ms-3'>Add</span>
                     </button>

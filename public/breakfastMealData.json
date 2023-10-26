@@ -1,6 +1,6 @@
 [
     {
-        "id": 1,
+        "id": "b1",
         "mealName": "Bagel and cream cheese",
         "mealText": "Healthy smoothie, a nutritious morning choice.",
         "price": "$6.99",
@@ -8,7 +8,7 @@
         "imgUrl": "https://ibb.co/KbYpnPg"
     },
     {
-        "id": 2,
+        "id": "b2",
         "mealName": "Breakfast sandwitch",
         "mealText": "Warm oatmeal, a comforting start everyday.",
         "price": "$9.99",
@@ -16,28 +16,28 @@
         "imgUrl": "https://ibb.co/wCZF8Mp"  
     },
     {
-        "id": 3,
+        "id": "b3",
         "mealName": "Baked chicken",
         "mealText": "Omelette filled with veggies, a delight.",
         "price": "$8.99",
         "img": "images/breakfast/breakfast3.png"  
     },
     {
-        "id": 4,
+        "id": "b4",
         "mealName": "Eggs benedict",
         "mealText": "Crispy bacon, eggs, toast—classic breakfast combo.",
         "price": "$6.99",
         "img": "images/breakfast/breakfast1.png"  
     },
     {
-        "id": 5,
+        "id": "b5",
         "mealName": "Toast croissant fried egg",
         "mealText": "Crispy bacon, eggs, toast—classic breakfast combo.",
         "price": "$19.99",
         "img": "images/breakfast/breakfast6.png"  
     },
     {
-        "id": 6,
+        "id": "b6",
         "mealName": "Full breakfast fried toast brunch",
         "mealText": "Crispy bacon, eggs, toast—classic breakfast combo.",
         "price": "$3.99",

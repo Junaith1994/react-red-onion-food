@@ -5,6 +5,7 @@ export const DinnerMealContext = createContext(null);
 const MealProviders = ({ children }) => {
     const [meals, setMeals] = useState([]);
     const [singleMeal, setSingleMeal] = useState({});
+    const [cart, setCart] = useState([]);
 
     useEffect(() => {
         fetch('dinnerMealData.json')
@@ -17,10 +18,21 @@ const MealProviders = ({ children }) => {
         return setSingleMeal(singleMealInfo);
     }
 
+    const handleFoodCart = item => {
+        let newCart = [];
+        // const exixstingItem = cart.find(meal => meal?.mealName === item?.mealName);
+        // console.log(exixstingItem);
+        newCart = [...cart, item];
+        return setCart(newCart);
+
+    }
+
     const mealInfo = {
         meals,
         handleSingleMeal,
-        singleMeal
+        singleMeal,
+        handleFoodCart,
+        cart
     };
 
     return (

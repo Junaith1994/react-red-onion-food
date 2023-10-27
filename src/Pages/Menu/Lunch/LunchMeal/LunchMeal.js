@@ -1,12 +1,15 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { LunchMealContext } from '../../../Context/LunchProviders';
 
 const LunchMeal = ({ meal }) => {
     const { id, img, mealName, mealText, price } = meal;
+    const { handleSingleMeal } = useContext(LunchMealContext);
     const navigate = useNavigate();
 
     const lunchMealDetails = () => {
         navigate(`/lunchMealDetails/${id}`);
+        handleSingleMeal(id);
     }
 
     return (

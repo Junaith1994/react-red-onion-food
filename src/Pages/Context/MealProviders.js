@@ -6,6 +6,9 @@ const MealProviders = ({ children }) => {
     const [meals, setMeals] = useState([]);
     const [singleMeal, setSingleMeal] = useState({});
     const [cart, setCart] = useState([]);
+    const [message, setMessage] = useState('');
+    // const messageTimeout = setTimeout(setMessage(''), 5000);
+    console.log(cart);
 
     useEffect(() => {
         fetch('dinnerMealData.json')
@@ -20,10 +23,17 @@ const MealProviders = ({ children }) => {
 
     const handleFoodCart = item => {
         let newCart = [];
-        // const exixstingItem = cart.find(meal => meal?.mealName === item?.mealName);
-        // console.log(exixstingItem);
-        newCart = [...cart, item];
-        return setCart(newCart);
+        const exixstingItem = cart.find(meal => meal.id === item.id);
+        if (!exixstingItem) {
+            newCart = [...cart, item];
+            return setCart(newCart);
+        }
+        else {
+            setMessage("Item already exist in the cart !")
+            setTimeout(() => {
+                setMessage('');
+            }, 4000);
+        }
 
     }
 
@@ -32,7 +42,9 @@ const MealProviders = ({ children }) => {
         handleSingleMeal,
         singleMeal,
         handleFoodCart,
-        cart
+        cart,
+        message,
+        setMessage
     };
 
     return (

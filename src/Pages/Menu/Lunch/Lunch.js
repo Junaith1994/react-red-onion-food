@@ -1,8 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import LunchMeal from './LunchMeal/LunchMeal';
+import { LunchMealContext } from '../../Context/LunchProviders';
 
 const Lunch = () => {
     const [meals, setMeals] = useState([]);
+    // const { lunchMeals } = useContext(LunchMealContext); 
     // console.log(meals);
     useEffect(() => {
         fetch('lunchMealData.json')

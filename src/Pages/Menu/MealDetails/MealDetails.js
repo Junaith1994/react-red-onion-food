@@ -4,13 +4,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
 
 const MealDetails = () => {
-    const { singleMeal, handleFoodCart } = useContext(DinnerMealContext);
+    const { singleMeal, handleFoodCart, message } = useContext(DinnerMealContext);
     const [quantity, setQuantity] = useState(1);
     const [price, setPrice] = useState(55);
 
-    // console.log(singleMeal);
-    // console.log(quantity);
-    // price calculator
     const priceHandler = () => setPrice(prevPrice => quantity * 55);
 
     // Quantity handler
@@ -38,6 +35,7 @@ const MealDetails = () => {
                         <FontAwesomeIcon icon={faCartShopping}></FontAwesomeIcon>
                         <span className='ms-3'>Add</span>
                     </button>
+                    <p className='text-success fw-semibold'>{message}</p>
                 </div>
             </div>
             <div>

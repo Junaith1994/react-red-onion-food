@@ -7,7 +7,7 @@ const FoodCart = () => {
 
     return (
         <div className='container'>
-            <h2 className='text-center'>Food Cart</h2>
+            <h2 className='text-center my-4'>Food Cart</h2>
             {
                 cart.map(item => <CartItem
                     key={item.id}

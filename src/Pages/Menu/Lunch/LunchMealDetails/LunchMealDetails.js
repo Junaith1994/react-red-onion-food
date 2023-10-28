@@ -8,7 +8,7 @@ const LunchMealDetails = () => {
     // LunchMeal data
     const { singleMeal } = useContext(LunchMealContext);
     
-    // Necessary functions from MealProviders 
+    // Necessary functions and states from MealProviders
     const { quantity, price, qtyHandler, handleFoodCart, message } = useContext(DinnerMealContext);
 
     console.log(singleMeal);

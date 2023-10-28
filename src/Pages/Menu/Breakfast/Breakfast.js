@@ -1,10 +1,10 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext } from 'react';
 import BreakfastMeal from './BreakfastMeal/BreakfastMeal';
 import { BreakfastMealContext } from '../../Context/BreakfastProviders';
 
 const Breakfast = () => {
     const { breakfastMeals } = useContext(BreakfastMealContext);
-    
+
     return (
         <div className='container mt-5'>
             <div className='row g-3'>

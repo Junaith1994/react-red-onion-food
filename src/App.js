@@ -10,6 +10,8 @@ import LunchMealDetails from './Pages/Menu/Lunch/LunchMealDetails/LunchMealDetai
 import FoodCart from './Pages/FoodCart/FoodCart';
 import BreakfastMealdetails from './Pages/Menu/Breakfast/BreakfastMealDetails/BreakfastMealdetails';
 import NotFound from './Pages/NotFound/NotFound';
+import Login from './Pages/Login/Login';
+import SignUp from './Pages/SignUp/SignUp';
 
 function App() {
   return (
@@ -24,6 +26,8 @@ function App() {
         <Route path='/lunchMealDetails/:mealId' element={<LunchMealDetails></LunchMealDetails>}></Route>
         <Route path='/breakfastMealDetails/:mealId' element={<BreakfastMealdetails></BreakfastMealdetails>}></Route>
         <Route path='/foodcart' element={<FoodCart></FoodCart>}></Route>
+        <Route path='/signup' element={<SignUp></SignUp>}></Route>
+        <Route path='/login' element={<Login></Login>}></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
     </div>

@@ -4,19 +4,19 @@ import { LunchMealContext } from '../../Context/LunchProviders';
 
 const Lunch = () => {
     const [meals, setMeals] = useState([]);
-    // const { lunchMeals } = useContext(LunchMealContext); 
+    const { lunchMeals } = useContext(LunchMealContext); 
     // console.log(meals);
-    useEffect(() => {
-        fetch('lunchMealData.json')
-            .then(res => res.json())
-            .then(data => setMeals(data))
-    }, [])
+    // useEffect(() => {
+    //     fetch('lunchMealData.json')
+    //         .then(res => res.json())
+    //         .then(data => setMeals(data))
+    // }, [])
 
     return (
         <div className='container mt-5'>
             <div className='row g-3'>
                 {
-                    meals.map(meal => <LunchMeal
+                    lunchMeals.map(meal => <LunchMeal
                         key={meal.id}
                         meal={meal}
                     ></LunchMeal>)

@@ -6,17 +6,20 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
 import MealProviders from './Pages/Context/MealProviders';
 import LunchProviders from './Pages/Context/LunchProviders';
+import BreakfastProviders from './Pages/Context/BreakfastProviders';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <LunchProviders>
-      <MealProviders>
-        <BrowserRouter>
-          <App />
-        </BrowserRouter>
-      </MealProviders>
-    </LunchProviders>
+    <BreakfastProviders>
+      <LunchProviders>
+        <MealProviders>
+          <BrowserRouter>
+            <App />
+          </BrowserRouter>
+        </MealProviders>
+      </LunchProviders>
+    </BreakfastProviders>
   </React.StrictMode>
 );
 

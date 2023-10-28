@@ -3,44 +3,54 @@
         "id": "b1",
         "mealName": "Bagel and cream cheese",
         "mealText": "Healthy smoothie, a nutritious morning choice.",
+        "description": "Fluffy Pancakes: Light and airy pancakes topped with fresh berries and a drizzle of maple syrup, the perfect morning indulgence.",
         "price": "$6.99",
         "img": "images/breakfast/breakfast4.png",  
-        "imgUrl": "https://ibb.co/KbYpnPg"
+        "imgUrl": "https://i.ibb.co/WGQ4ChX/breakfast4.png"
     },
     {
         "id": "b2",
         "mealName": "Breakfast sandwitch",
         "mealText": "Warm oatmeal, a comforting start everyday.",
+        "description": "Avocado Toast: Toasted sourdough topped with creamy avocado, cherry tomatoes, and a sprinkle of tangy feta, a nutritious and satisfying breakfast option.",
         "price": "$9.99",
         "img": "images/breakfast/breakfast2.png",
-        "imgUrl": "https://ibb.co/wCZF8Mp"  
+        "imgUrl": "https://i.ibb.co/VD0cb2M/breakfast2.png"  
     },
     {
         "id": "b3",
         "mealName": "Baked chicken",
         "mealText": "Omelette filled with veggies, a delight.",
+        "description": "Classic Omelette: Fluffy eggs folded over a filling of sautéed vegetables and melted cheese, a savory and protein-packed breakfast choice.",
         "price": "$8.99",
-        "img": "images/breakfast/breakfast3.png"  
+        "img": "images/breakfast/breakfast3.png",
+        "imgUrl": "https://i.ibb.co/WD6MQWy/breakfast3.png"  
     },
     {
         "id": "b4",
         "mealName": "Eggs benedict",
         "mealText": "Crispy bacon, eggs, toast—classic breakfast combo.",
+        "description": "Yogurt Parfait: Layers of Greek yogurt, crunchy granola, and seasonal fruits, a refreshing and wholesome start to the day.",
         "price": "$6.99",
-        "img": "images/breakfast/breakfast1.png"  
+        "img": "images/breakfast/breakfast1.png",
+        "imgUrl": "https://i.ibb.co/37v4knb/breakfast1.png"  
     },
     {
         "id": "b5",
         "mealName": "Toast croissant fried egg",
         "mealText": "Crispy bacon, eggs, toast—classic breakfast combo.",
+        "description": "Breakfast Burrito: Scrambled eggs, crispy bacon, and melted cheese wrapped in a warm tortilla, a hearty and portable morning treat.",
         "price": "$19.99",
-        "img": "images/breakfast/breakfast6.png"  
+        "img": "images/breakfast/breakfast6.png",
+        "imgUrl": "https://i.ibb.co/LYpg5c0/breakfast6.png"  
     },
     {
         "id": "b6",
         "mealName": "Full breakfast fried toast brunch",
         "mealText": "Crispy bacon, eggs, toast—classic breakfast combo.",
+        "description": "Fresh Fruit Bowl: A vibrant assortment of sliced fruits, including juicy watermelon, ripe berries, and sweet pineapple, a colorful and vitamin-rich breakfast delight.",
         "price": "$3.99",
-        "img": "images/breakfast/breakfast5.png"  
+        "img": "images/breakfast/breakfast5.png",
+        "imgUrl": "https://i.ibb.co/9WXhWWd/breakfast5.png"  
     }
 ]

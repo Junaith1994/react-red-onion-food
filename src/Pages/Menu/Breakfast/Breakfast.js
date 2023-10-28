@@ -1,20 +1,15 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import BreakfastMeal from './BreakfastMeal/BreakfastMeal';
+import { BreakfastMealContext } from '../../Context/BreakfastProviders';
 
 const Breakfast = () => {
-    const [meals, setMeals] = useState([]);
-    // console.log(meals);
-    useEffect(() => {
-        fetch('breakfastMealData.json')
-            .then(res => res.json())
-            .then(data => setMeals(data))
-    }, [])
-
+    const { breakfastMeals } = useContext(BreakfastMealContext);
+    
     return (
         <div className='container mt-5'>
             <div className='row g-3'>
                 {
-                    meals.map(meal => <BreakfastMeal
+                    breakfastMeals.map(meal => <BreakfastMeal
                         key={meal.id}
                         meal={meal}
                     ></BreakfastMeal>)

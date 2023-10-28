@@ -1,23 +1,25 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { DinnerMealContext } from '../../Context/MealProviders';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
 
 const MealDetails = () => {
-    const { singleMeal, handleFoodCart, message } = useContext(DinnerMealContext);
-    const [quantity, setQuantity] = useState(1);
-    const [price, setPrice] = useState(55);
+    //All necessary states and functions from MealProviders
+    const { singleMeal, handleFoodCart, message, quantity, price, qtyHandler } = useContext(DinnerMealContext);
+    // const [quantity, setQuantity] = useState(1);
+    // const [price, setPrice] = useState(55);
 
-    const priceHandler = () => setPrice(prevPrice => quantity * 55);
+    // const priceHandler = () => setPrice(prevPrice => quantity * 55);
 
     // Quantity handler
-    const qtyHandler = add => {
-        add ? setQuantity(prevQuantity => quantity + 1) : quantity > 1 && setQuantity(prevQuantity => prevQuantity - 1)
-    }
-
-    useEffect(() => {
-        priceHandler();
-    }, [quantity]);
+    // const qtyHandler = add => {
+    //     add ? setQuantity(prevQuantity => quantity + 1) : quantity > 1 && setQuantity(prevQuantity => prevQuantity - 1)
+    // }
+ 
+    // Using qunatityHandler and priceHandler from MealProviders
+    // useEffect(() => {
+    //     priceHandler();
+    // }, [quantity]);
 
     return (
         <div className='d-flex container'>

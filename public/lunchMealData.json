@@ -3,42 +3,54 @@
         "id": "L1",
         "mealName": "Healthy Meal Plan",
         "mealText": "Savor the Moment with Lunch Delicacies",
+        "description": "Grilled chicken salad with fresh greens, avocado, and a tangy balsamic vinaigrette for a healthy, satisfying lunch.",
         "price": "$23.99",
-        "img": "images/lunch/lunch6.png"
+        "img": "images/lunch/lunch6.png",
+        "imgUrl": "https://i.ibb.co/ch3tXqn/lunch6.png"
     },
     {
         "id": "L2",
         "mealName": "Fried Chicken Bento",
         "mealText": "Quick and Tasty Lunchtime Favorites",
+        "description": "Classic Italian pasta primavera featuring seasonal vegetables and a rich tomato sauce, topped with grated Parmesan cheese.",
         "price": "$9.99",
-        "img": "images/lunch/lunch5.png"
+        "img": "images/lunch/lunch5.png",
+        "imgUrl": "https://i.ibb.co/YLXdYLc/lunch5.png"
     },
     {
         "id": "L3",
         "mealName": "Tarragon-Rubbed-Salmon",
         "mealText": "Lunchtime Delights: Fresh and Savory Choices",
+        "description": "Flavorful teriyaki tofu served with steamed rice, sautéed vegetables, and a side of homemade sweet and savory sauce.",
         "price": "$6.99",
-        "img": "images/lunch/lunch3.png"
+        "img": "images/lunch/lunch3.png",
+        "imgUrl": "https://i.ibb.co/RSSLkDh/lunch3.png"
     },
     {
         "id": "L4",
         "mealName": "Indian Lunch",
         "mealText": "Enjoy a Flavorful Midday Dining Experience",
+        "description": "Hearty turkey club sandwich layered with crispy bacon, lettuce, tomato, and mayonnaise on toasted whole-grain bread.",
         "price": "$8.99",
-        "img": "images/lunch/lunch4.png"
+        "img": "images/lunch/lunch4.png",
+        "imgUrl": "https://i.ibb.co/0DkN9nf/lunch4.png"
     },
     {
         "id": "L5",
         "mealName": "Beef Steak",
         "mealText": "Delicious Lunch Options to Satisfy Cravings",
+        "description": "Aromatic coconut curry with tender shrimp, bell peppers, and fragrant jasmine rice, a delightful fusion of flavors and textures.",
         "price": "$15.99",
-        "img": "images/lunch/lunch1.png"
+        "img": "images/lunch/lunch1.png",
+        "imgUrl": "https://i.ibb.co/yV5Zw3L/lunch1.png"
     },
     {
         "id": "L6",
         "mealName": "Honey-Soy-Glazed Salmon with Peppers",
         "mealText": "Lunchtime Delights: Fresh and Savory Choices",
+        "description": "Fresh Greek gyro filled with seasoned lamb, crisp lettuce, tomatoes, onions, and tangy tzatziki sauce, wrapped in warm pita.",
         "price": "$7.99",
-        "img": "images/lunch/lunch2.png"
+        "img": "images/lunch/lunch2.png",
+        "imgUrl": "https://i.ibb.co/TrD3Kt2/lunch2.png"
     }
 ]

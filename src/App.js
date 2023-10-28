@@ -8,6 +8,8 @@ import Menu from './Pages/Menu/Menu';
 import MealDetails from './Pages/Menu/MealDetails/MealDetails';
 import LunchMealDetails from './Pages/Menu/Lunch/LunchMealDetails/LunchMealDetails';
 import FoodCart from './Pages/FoodCart/FoodCart';
+import BreakfastMealdetails from './Pages/Menu/Breakfast/BreakfastMealDetails/BreakfastMealdetails';
+import NotFound from './Pages/NotFound/NotFound';
 
 function App() {
   return (
@@ -20,7 +22,9 @@ function App() {
         <Route path='/dinner' element={<Dinner></Dinner>}></Route>
         <Route path='/mealdetails/:mealId' element={<MealDetails></MealDetails>}></Route>
         <Route path='/lunchMealDetails/:mealId' element={<LunchMealDetails></LunchMealDetails>}></Route>
+        <Route path='/breakfastMealDetails/:mealId' element={<BreakfastMealdetails></BreakfastMealdetails>}></Route>
         <Route path='/foodcart' element={<FoodCart></FoodCart>}></Route>
+        <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
     </div>
   );

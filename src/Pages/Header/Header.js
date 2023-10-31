@@ -5,6 +5,8 @@ import './Header.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons'
 import Banner from './Banner/Banner';
+import { useAuthState, useSignOut } from 'react-firebase-hooks/auth';
+import auth from '../../firebase.init';
 
 const Header = () => {
     /* // States for signup, login and banner section Toggling
@@ -39,10 +41,14 @@ const Header = () => {
         }
     }
  */
+    // AuthState and signOut function
+    const [user, loading, error] = useAuthState(auth);
+    // console.log(user?.email);
+    const [signOut, SignOutLoading, SignOutError] = useSignOut(auth);
 
     // Scroll handler to target element
-    const scrollHandler = id => {
-        const element = document.getElementById(id);
+    const scrollHandler = () => {
+        const element = document.getElementById('navlink-container');
         if(element) {
             element.scrollIntoView({behavior: 'instant'});
         }
@@ -58,7 +64,9 @@ const Header = () => {
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className='ms-auto'>
                             <Nav.Link as={Link} to="/foodcart" className='me-3'><FontAwesomeIcon icon={faCartShopping}></FontAwesomeIcon></Nav.Link>
-                            <Nav.Link as={Link} onClick={() => scrollHandler('login')} className='fw-bold me-3' to={"/login"}>Login</Nav.Link>
+                            {user ? <Button onClick={() => signOut()} className='btn btn-danger me-3 fw-semibold border-0 rounded-pill px-4'>Log Out</Button> 
+                            : 
+                            <Nav.Link as={Link} onClick={scrollHandler} className='fw-bold me-3' to={"/login"}>Login</Nav.Link>}
                             <Button as={Link} onClick={() => scrollHandler('signup')} to="/signup" className='sign-up-btn border border-0 rounded-pill px-4'>Sign up</Button>
                         </Nav>
                     </Navbar.Collapse>

@@ -31,7 +31,7 @@ const SignUp = () => {
     }
 
     return (
-        <div id='signup' className='mx-auto my-3 w-25'>
+        <div className='mx-auto my-3 w-25'>
             <div className='p-2 my-5 text-center'>
                 <img className='w-50' src="https://i.ibb.co/Qjq89Gr/logo2.png" alt="Icon" />
             </div>

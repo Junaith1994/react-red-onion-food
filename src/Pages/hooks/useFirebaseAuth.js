@@ -8,14 +8,14 @@ const useFirebaseAuth = () => {
     // User Sign-in
     const [
         signInWithEmailAndPassword,
-        signedUser,
+        signedInUser,
         signInLoading,
         signInError,
     ] = useSignInWithEmailAndPassword(auth);
 
     return {
         createUserWithEmailAndPassword,
-        user, loading, error, signInWithEmailAndPassword, signedUser, signInLoading, signInError
+        user, loading, error, signInWithEmailAndPassword, signedInUser, signInLoading, signInError
     }
 }
 

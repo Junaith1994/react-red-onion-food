@@ -7,7 +7,7 @@ const Menu = () => {
     return (
         <div>
             <Navbar className='mt-5' data-bs-theme="light">
-                <Container className=''>
+                <Container id='navlink-container'>
                     <Nav className="mx-auto route-link">
                         <NavLink className={({ isActive, isPending }) => isPending ? 'pending' : isActive ? 'active' : ''} to="/breakfast">Breakfast</NavLink>
                         <NavLink className={({ isActive, isPending }) => isPending ? 'pending' : isActive ? 'active' : ''} to="/lunch">Lunch</NavLink>

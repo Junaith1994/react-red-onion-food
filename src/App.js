@@ -17,8 +17,10 @@ function App() {
   return (
     <div>
       <Header></Header>
+      {/* <SignUp></SignUp> */}
       <Menu></Menu>
       <Routes>
+        <Route path='/' element={<Breakfast></Breakfast>}></Route>
         <Route path='/breakfast' element={<Breakfast></Breakfast>}></Route>
         <Route path='/lunch' element={<Lunch></Lunch>}></Route>
         <Route path='/dinner' element={<Dinner></Dinner>}></Route>

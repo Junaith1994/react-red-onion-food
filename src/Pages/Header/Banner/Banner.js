@@ -1,6 +1,8 @@
 import React from 'react';
 import './Banner.css';
 import { Button, Form, InputGroup } from 'react-bootstrap';
+import Login from '../../Login/Login';
+import SignUp from '../../SignUp/SignUp';
 
 const Banner = () => {
     return (
@@ -22,6 +24,8 @@ const Banner = () => {
                         </InputGroup>
                     </div>
                 </div>
+                {/* <Login loginClicked={loginClicked}></Login>
+                <SignUp signUpClicked={signUpClicked}></SignUp> */}
             </div>
         </div>
 

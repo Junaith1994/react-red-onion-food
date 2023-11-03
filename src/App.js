@@ -12,6 +12,9 @@ import BreakfastMealdetails from './Pages/Menu/Breakfast/BreakfastMealDetails/Br
 import NotFound from './Pages/NotFound/NotFound';
 import Login from './Pages/Login/Login';
 import SignUp from './Pages/SignUp/SignUp';
+import RequireAuth from './Pages/ProtectedRoute/RequireAuth';
+import 'react-toastify/dist/ReactToastify.min.css';
+import { ToastContainer } from 'react-toastify';
 
 function App() {
   return (
@@ -27,11 +30,16 @@ function App() {
         <Route path='/mealdetails/:mealId' element={<MealDetails></MealDetails>}></Route>
         <Route path='/lunchMealDetails/:mealId' element={<LunchMealDetails></LunchMealDetails>}></Route>
         <Route path='/breakfastMealDetails/:mealId' element={<BreakfastMealdetails></BreakfastMealdetails>}></Route>
-        <Route path='/foodcart' element={<FoodCart></FoodCart>}></Route>
+        <Route path='/foodcart' element={
+          <RequireAuth>
+            <FoodCart></FoodCart>
+          </RequireAuth>}>
+        </Route>
         <Route path='/signup' element={<SignUp></SignUp>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
+      <ToastContainer></ToastContainer>
     </div>
   );
 }

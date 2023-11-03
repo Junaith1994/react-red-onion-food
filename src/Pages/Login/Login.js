@@ -1,36 +1,40 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef } from 'react';
 import { Button, Form } from 'react-bootstrap';
-import { Link, NavLink } from 'react-router-dom';
-import useFirebaseAuth from '../hooks/useFirebaseAuth';
+import { Link, NavLink, useLocation, useNavigate } from 'react-router-dom';
+import { ToastContainer, toast } from 'react-toastify';
+import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import auth from '../../firebase.init';
 
 const Login = () => {
     const emailRef = useRef('');
     const passwordRef = useRef('');
-    const [error, setError] = useState('');
-    const [successMsg, setSuccessMsg] = useState('');
+    let navigate = useNavigate();
+    let location = useLocation();
+
+    let from = location?.state?.from?.pathname || '/';
 
     // Firebase authentication custom hook
-    const { signInWithEmailAndPassword, signedInUser, signInError } = useFirebaseAuth();
-    // console.log(signInError?.message);
-    // console.log(error);
-    console.log(signedInUser);
+    const [
+        signInWithEmailAndPassword,
+        error,
+    ] = useSignInWithEmailAndPassword(auth);
 
     // Form submit handler
     const formSubmitHandler = event => {
         event.preventDefault();
-        const form = event.target;
-        emailRef.current = form.email.value;
-        passwordRef.current = form.password.value;
+        // const form = event.target;
+        const email = emailRef.current.value;
+        const password = passwordRef.current.value;
 
+        // console.log(email);
+        console.log(password);
         // User sign-in with email & password
-        setError('');
-        setSuccessMsg('');
-        signInWithEmailAndPassword(emailRef.current, passwordRef.current);
-        signedInUser && setSuccessMsg('Sign-In successfully !');
-        signInError?.message && setError(signInError?.message);
-
+        signInWithEmailAndPassword(email, password)
+            .then(user => {
+                user && toast("Sign-in Successful !")
+                navigate(from, { replace: true });
+            })
     }
-
 
     return (
         <div className='text-center my-4'>
@@ -40,18 +44,18 @@ const Login = () => {
                 </div>
                 <Form onSubmit={formSubmitHandler}>
                     <Form.Group className="mb-3" controlId="formBasicEmail">
-                        <Form.Control className='p-3 shadow-sm' name='email' type="email" placeholder="Email" required />
+                        <Form.Control className='p-3 shadow-sm' ref={emailRef} type="email" placeholder="Email" required />
                     </Form.Group>
 
                     <Form.Group className="mb-3" controlId="formBasicPassword">
-                        <Form.Control className='p-3 shadow-sm' name='password' type="password" placeholder="Password" required />
+                        <Form.Control className='p-3 shadow-sm' ref={passwordRef} type="password" placeholder="Password" required />
                     </Form.Group>
                     <Button className='w-100 sign-up-btn border-0' variant="primary" type="submit">
                         Sign-In
                     </Button>
                 </Form>
-                <p className='text-danger fw-semibold text-center'>{error}</p>
-                <p className='text-success fw-semibold text-center'>{successMsg}</p>
+                {error && <p className='text-danger fw-semibold text-center'>{error?.message}</p>}
+                <ToastContainer></ToastContainer>
                 <div className='my-3 text-center'>
                     <span style={{ "color": "crimson" }} className='fw-semibold'>Don't have an account :</span> <NavLink as={Link} to='/signup'>Sign-up</NavLink>
                 </div>

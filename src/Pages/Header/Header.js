@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Button, Container, Nav, Navbar } from 'react-bootstrap';
-import { Link, NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import './Header.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons'
@@ -9,50 +9,21 @@ import { useAuthState, useSignOut } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 
 const Header = () => {
-    /* // States for signup, login and banner section Toggling
-    const [loginClicked, setLoginClicked] = useState(false);
-    const [signUpClicked, setSignUpClicked] = useState(false);
-    const [bannerClicked, setBannerClicked] = useState(true);
-    
-    // Login toggle handler
-    const loginToggle = () => {
-        if(!loginClicked) {
-            setLoginClicked(true);
-            setSignUpClicked(false);
-            setBannerClicked(false);
-        }
-        else {
-            setLoginClicked(false);
-            setSignUpClicked(false);
-            setBannerClicked(true);
-        }
-    };
-    // Signup toggle handler
-    const signUpToggle = () => {
-        if(!signUpClicked) {
-            setSignUpClicked(true);
-            setBannerClicked(false);
-            setLoginClicked(false);
-        }
-        else {
-            setSignUpClicked(false)
-            setLoginClicked(false);
-            setBannerClicked(true);
-        }
-    }
- */
     // AuthState and signOut function
     const [user, loading, error] = useAuthState(auth);
+    // console.log(user);
     // console.log(user?.email);
     const [signOut, SignOutLoading, SignOutError] = useSignOut(auth);
-
+    
+    // if(loading) {
+    //     return <p>Loading..</p>
+    // }
     // Scroll handler to target element
     const scrollHandler = () => {
         const element = document.getElementById('navlink-container');
         if(element) {
             element.scrollIntoView({behavior: 'instant'});
         }
-        
     }
 
     return (
@@ -63,7 +34,7 @@ const Header = () => {
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className='ms-auto'>
-                            <Nav.Link as={Link} to="/foodcart" className='me-3'><FontAwesomeIcon icon={faCartShopping}></FontAwesomeIcon></Nav.Link>
+                            <Nav.Link onClick={scrollHandler} as={Link} to="/foodcart" className='me-3'><FontAwesomeIcon icon={faCartShopping}></FontAwesomeIcon></Nav.Link>
                             {user ? <Button onClick={() => signOut()} className='btn btn-danger me-3 fw-semibold border-0 rounded-pill px-4'>Log Out</Button> 
                             : 
                             <Nav.Link as={Link} onClick={scrollHandler} className='fw-bold me-3' to={"/login"}>Login</Nav.Link>}

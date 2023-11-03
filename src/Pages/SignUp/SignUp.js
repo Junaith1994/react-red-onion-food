@@ -1,18 +1,20 @@
 import React, { useRef, useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
-import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink, useNavigate } from 'react-router-dom';
 import useFirebaseAuth from '../hooks/useFirebaseAuth';
 
 const SignUp = () => {
     const emailRef = useRef('');
     const passwordRef = useRef('');
     const confirmPassRef = useRef('');
-    const [error, setError] = useState('');
+    const [signUpError, setSignUpError] = useState('');
     const [successMsg, setSuccessMsg] = useState('');
+    const navigate = useNavigate();
 
     // Firebase Authentication custom hook
-    const { createUserWithEmailAndPassword, user } = useFirebaseAuth();
+    const { createUserWithEmailAndPassword, user, error } = useFirebaseAuth();
     console.log(user);
+    console.log(error);
 
     // Form submit handler
     const formSubmitHandler = event => {
@@ -22,13 +24,18 @@ const SignUp = () => {
         passwordRef.current = form.password.value;
         confirmPassRef.current = form.confirmPassword.value;
 
-        // Creating user account with email & password
-        setError('');
+        // Creating user account with email & password with error handling
+        setSignUpError('');
         setSuccessMsg('');
-        passwordRef.current === confirmPassRef.current ? createUserWithEmailAndPassword(emailRef.current, passwordRef.current) : setError("Passwords are not matched");
-        setSuccessMsg('Account created successfully !')
-
-    }
+        passwordRef.current === confirmPassRef.current ? createUserWithEmailAndPassword(emailRef.current, passwordRef.current)
+            .then(() => {
+                setSuccessMsg("Account created successfully !");
+            })
+            .catch(() => setSignUpError(error?.message))
+            : setSignUpError("Passwords are not matching !");
+        // Navigating user to the root path
+        navigate("/");
+    };
 
     return (
         <div className='mx-auto my-3 w-25'>
@@ -50,7 +57,7 @@ const SignUp = () => {
                     Sign-Up
                 </Button>
             </Form>
-            <p className='text-danger fw-semibold text-center'>{error}</p>
+            <p className='text-danger fw-semibold text-center'>{signUpError}</p>
             <p className='text-success fw-semibold text-center'>{successMsg}</p>
             <div className='my-3 text-center'>
                 <span style={{ "color": "crimson" }} className='fw-semibold'>Already have an account?</span> <NavLink as={Link} to='/login'>Sign-in</NavLink>

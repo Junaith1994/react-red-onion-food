@@ -13,7 +13,7 @@ const LunchMealDetails = () => {
 
     console.log(singleMeal);
     return (
-        <div className='d-flex container'>
+        <div className='d-flex flex-md-row flex-column-reverse container my-4'>
             <div>
                 <h3>{singleMeal?.mealName}</h3>
                 <p>{singleMeal?.description}</p>
@@ -31,8 +31,8 @@ const LunchMealDetails = () => {
                     <p className='text-success fw-semibold'>{message}</p>
                 </div>
             </div>
-            <div>
-                <img className='w-50' src={singleMeal?.imgUrl} alt="" />
+            <div className='row'>
+                <img className='col-12' src={singleMeal?.imgUrl} alt="" />
             </div>
         </div>
     );

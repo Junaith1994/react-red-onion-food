@@ -39,7 +39,7 @@ const SignUp = () => {
 
     return (
         <div className='text-center my-4 row w-100'>
-            <div className='mx-auto col-6 col-md-3 container'>
+            <div className='mx-auto col-9 col-md-3 container'>
                 <div className='p-2 my-5 text-center'>
                     <img className='w-50' src="https://i.ibb.co/Qjq89Gr/logo2.png" alt="Icon" />
                 </div>

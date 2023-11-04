@@ -8,6 +8,7 @@ import auth from '../../firebase.init';
 const Login = () => {
     const emailRef = useRef('');
     const passwordRef = useRef('');
+    // const [signInError, setSignInError] = useState('');
     let navigate = useNavigate();
     let location = useLocation();
 
@@ -26,13 +27,12 @@ const Login = () => {
         const email = emailRef.current.value;
         const password = passwordRef.current.value;
 
-        // console.log(email);
-        console.log(password);
         // User sign-in with email & password
         signInWithEmailAndPassword(email, password)
             .then(user => {
-                user && toast("Sign-in Successful !")
-                navigate(from, { replace: true });
+                console.log(user);
+                user && toast("Sign-in Successful !");
+                user && navigate(from, { replace: true });
             })
     }
 
@@ -54,7 +54,7 @@ const Login = () => {
                         Sign-In
                     </Button>
                 </Form>
-                {error && <p className='text-danger fw-semibold text-center'>{error?.message}</p>}
+                <p className='text-danger fw-semibold text-center'>{error?.message}</p>
                 <ToastContainer></ToastContainer>
                 <div className='my-3 text-center'>
                     <span style={{ "color": "crimson" }} className='fw-semibold'>Don't have an account :</span> <NavLink as={Link} to='/signup'>Sign-up</NavLink>
